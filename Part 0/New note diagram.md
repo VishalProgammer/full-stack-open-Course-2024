@@ -12,3 +12,13 @@ flowchart LR
   id2-->cmd1-->id1
 
 ```
+```mermaid
+
+flowchart LR
+  id1[Browser]
+  cmd1[/GET main.css/]
+  id2[Server]
+  id1-->cmd1-->id2
+  id2-->cmd1-->id1
+
+```
