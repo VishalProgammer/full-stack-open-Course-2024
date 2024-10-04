@@ -1,4 +1,5 @@
-     ---title: Node with text---
-    flowchart LR
-        id1[Browser]
-
+---
+title: Node
+---
+flowchart LR
+    id
