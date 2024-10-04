@@ -1,5 +1,5 @@
 ```mermaid
- ---
+---
 title: Diagram of how Notes Page Loads while adding a new note
 ---
 %%{init: {"flowchart": {"htmlLabels": false}} }%%
@@ -50,11 +50,12 @@ flowchart LR
 ```
 
 ```mermaid
- The browser executes the callback function that renders the notes
+sequenceDiagram
+The browser executes the callback function that renders the notes
 ```
 
 ```mermaid
- ---
+---
 title: When a new Note is added by the User: 
 ---
 flowchart LR
@@ -67,5 +68,6 @@ flowchart LR
 
 ```
 ```mermaid
+sequenceDiagram
  The browser refreshes and executes the callback function that renders the notes
 ```
