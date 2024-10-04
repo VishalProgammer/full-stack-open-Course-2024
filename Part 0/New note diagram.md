@@ -73,4 +73,4 @@ flowchart LR
 
 ---
 
-<h2>**Then browser refreshes the page and executes the callback function that renders the notes**</h2>
+<h2>*Then browser refreshes the page and executes the callback function that renders the notes*</h2>
