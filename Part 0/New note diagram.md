@@ -27,8 +27,7 @@
 
     Note right of browser: The browser executes the callback function that renders the notes```
 
-
- When a link gets clicked:
+    When a link gets clicked:
   graph TD;
       browser-->server;
       A-->C;
