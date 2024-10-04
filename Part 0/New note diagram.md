@@ -4,7 +4,7 @@ title: Diagram of how Notes Page Loads while adding a new note
 ---
 flowchart LR
     id1[Browser]
-    cmd1[/GET [site URL](https://studies.cs.helsinki.fi/exampleapp/notes/)]
+    cmd1[/`GET [site URL](https://studies.cs.helsinki.fi/exampleapp/notes`/)]
     id2[Server]
     id1-->cmd1-->id2
     
