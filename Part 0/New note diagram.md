@@ -10,7 +10,7 @@ flowchart LR
   id2[Server]
   id1-->cmd1-->id2
   id2-->cmd1-->id1
-end
+'end'
 
 
 flowchart LR
