@@ -17,9 +17,10 @@ flowchart LR
 flowchart LR
   id1[Browser]
   cmd1[/GET main.css/]
+  cmd2[/CSS file/]
   id2[Server]
   id1-->cmd1-->id2
-  id2-->cmd1-->id1
+  id2-->cmd2-->id1
 
 ```
 ```mermaid
@@ -27,21 +28,23 @@ flowchart LR
 flowchart LR
   id1[Browser]
   cmd1[/GET main.js/]
+  cmd2[/JavaScript file/]
   id2[Server]
   id1-->cmd1-->id2
-  id2-->cmd1-->id1
+  id2-->cmd2-->id1
 
 ```
 
 ```mermaid
  ---
-title: Diagram of how Notes Page Loads while adding a new note
+title: The browser starts executing the JavaScript code that fetches the JSON from the server 
 ---
 flowchart LR
   id1[Browser]
-  cmd1[/GET main.css/]
+  cmd1[/GET main.json/]
+  cmd2[/JSON file/]
   id2[Server]
   id1-->cmd1-->id2
-  id2-->cmd1-->id1
+  id2-->cmd2-->id1
 
 ```
