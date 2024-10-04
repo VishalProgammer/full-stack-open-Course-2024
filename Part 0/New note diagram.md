@@ -12,6 +12,7 @@ flowchart LR
   id1-->cmd1-->id2-->cmd2-->id1
 
 ```
+
 ```mermaid
 
 flowchart LR
@@ -23,6 +24,7 @@ flowchart LR
   id2-->cmd2-->id1
 
 ```
+
 ```mermaid
 
 flowchart LR
@@ -37,7 +39,7 @@ flowchart LR
 
 ```mermaid
  ---
-title: The browser starts executing the JavaScript code that fetches the JSON from the server 
+title: The browser starts executing the JavaScript code that fetches the JSON from the server
 ---
 flowchart LR
   id1[Browser]
@@ -49,12 +51,11 @@ flowchart LR
 
 ```
 
-
 ---
+
 title: The browser executes the callback function that renders the notes
 
 ---
-
 
 ```mermaid
 ---
@@ -71,6 +72,5 @@ flowchart LR
 ```
 
 ---
-The browser refreshes and executes the callback function that renders the notes
----
 
+<h2>**Then browser refreshes the page and executes the callback function that renders the notes**</h2>
