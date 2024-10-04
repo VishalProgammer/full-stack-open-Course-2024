@@ -30,7 +30,7 @@
 
  When a link gets clicked:
   graph TD;
-      browser-->server: GET https://studies.cs.helsinki.fi/exampleapp/notes
+      browser-->server;
       A-->C;
       B-->D;
       C-->D;
