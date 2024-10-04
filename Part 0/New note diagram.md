@@ -5,7 +5,6 @@ title: Diagram of how Notes Page Loads while adding a new note
 %%{init: {"flowchart": {"htmlLabels": false}} }%%
 
 flowchart LR
-subgraph "One"
   id1[Browser]
   cmd1[/GET site URL/]
   id2[Server]
