@@ -1,15 +1,24 @@
 ```mermaid
-%%{init: {"flowchart": {"htmlLabels": false}} }%%
+ ---
+title: Diagram of how Notes Page Loads while adding a new note
+---
+
 flowchart LR
-subgraph "One"
-  a("`The **cat**
-  in the hat`") -- "edge label" --> b{{"`The **dog** in the hog`"}}
-end
-subgraph "`**Two**`"
-  c("`The **cat**
-  in the hat`") -- "`Bold **edge label**`" --> d("The dog in the hog")
+id1[Browser]
+cmd1[/GET site URL/]
+id2[Server]
+cmd[/GET main.css/]
+id1-->cmd1-->id2
+id2-->cmd1-->id1
 end
 
+flowchart LR
+id1[Browser]
+cmd1[/GET site URL/]
+id2[Server]
+cmd[/GET main.css/]
+id1-->cmd1-->id2
+id2-->cmd1-->id1
 
 
 ```
