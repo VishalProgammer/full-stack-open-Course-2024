@@ -9,8 +9,10 @@ flowchart LR
     id1-->cmd1-->id2
 
 flowchart LR
-  cmd2[/GET main.css file/]
-  id1-->cmd2-->id2
+    id1[Browser]
+    id2[Server]
+    cmd2[/GET main.css file/]
+    id1-->cmd2-->id2
 
 
 ```
