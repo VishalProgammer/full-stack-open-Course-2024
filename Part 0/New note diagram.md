@@ -50,8 +50,9 @@ flowchart LR
 ```
 
 ```mermaid
-sequenceDiagram
-The browser executes the callback function that renders the notes
+---
+title: The browser executes the callback function that renders the notes: 
+---
 ```
 
 ```mermaid
@@ -68,6 +69,7 @@ flowchart LR
 
 ```
 ```mermaid
-sequenceDiagram
- The browser refreshes and executes the callback function that renders the notes
+---
+title: The browser refreshes and executes the callback function that renders the notes: 
+---
 ```
