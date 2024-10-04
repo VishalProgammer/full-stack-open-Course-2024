@@ -53,13 +53,13 @@ flowchart LR
 
 ---
 
-title: The browser executes the callback function that renders the notes
+<b>The browser executes the callback function that renders the notes</b>
 
 ---
 
 ```mermaid
 ---
-title: When a new Note is added by the User
+When a new Note is added by the User
 ---
 flowchart LR
   id1[Browser]
@@ -73,4 +73,4 @@ flowchart LR
 
 ---
 
-<h2>*Then browser refreshes the page and executes the callback function that renders the notes*</h2>
+<h2>Then browser refreshes the page and executes the callback function that renders the notes</h2>
