@@ -69,8 +69,8 @@ flowchart LR
   id2-->cmd2-->id1
 
 ```
-```mermaid
+
 ---
-title: The browser refreshes and executes the callback function that renders the notes
+The browser refreshes and executes the callback function that renders the notes
 ---
-```
+
