@@ -27,10 +27,18 @@
 
     Note right of browser: The browser executes the callback function that renders the notes```
 
+<<<<<<< HEAD
     ---
 title: Note Diagram of how page loads
 ---
 flowchart LR
     id1[browser]
+=======
+  graph TD;
+      browser-->server;
+      A-->C;
+      B-->D;
+      C-->D;
+>>>>>>> aa30e9ef05c15fd5ac2b31d42be535c9049d260a
 
 ````
