@@ -26,4 +26,13 @@
         deactivate server
 
     Note right of browser: The browser executes the callback function that renders the notes```
+
+
+ When a link gets clicked:
+  graph TD;
+      browser-->server: GET https://studies.cs.helsinki.fi/exampleapp/notes
+      A-->C;
+      B-->D;
+      C-->D;
+
 ````
