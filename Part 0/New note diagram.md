@@ -1,7 +1,6 @@
 ```Mermaid
-    ---
-    title: Node with text
-    ---
-    flowchart LR
-        id1[This is the text in the box]
+    sequenceDiagram
+    Alice->>John: Hello John, how are you?
+    John-->>Alice: Great!
+    Alice-)John: See you later!
 ```
