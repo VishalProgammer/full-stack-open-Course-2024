@@ -11,5 +11,9 @@ id1-->cmd1-->id2
 id2-->cmd1-->id1
 End
 
-
+flowchart LR
+id3[Browser]
+cmd1[/GET main.css/]
+id4[Server]
+id3-->cmd2-->id4
 ```
