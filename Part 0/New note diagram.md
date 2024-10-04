@@ -1,6 +1,4 @@
-````mermaid
-    ---title: Node with text---
+     ---title: Node with text---
     flowchart LR
         id1[Browser]
 
-````
