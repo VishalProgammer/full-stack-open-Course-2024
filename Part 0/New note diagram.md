@@ -48,3 +48,24 @@ flowchart LR
   id2-->cmd2-->id1
 
 ```
+
+```mermaid
+ The browser executes the callback function that renders the notes
+```
+
+```mermaid
+ ---
+title: When a new Note is added by the User: 
+---
+flowchart LR
+  id1[Browser]
+  cmd1[\POST new_note\]
+  cmd2[\updated HTML file\]
+  id2[Server]
+  id1-->cmd1-->id2
+  id2-->cmd2-->id1
+
+```
+```mermaid
+ The browser refreshes and executes the callback function that renders the notes
+```
