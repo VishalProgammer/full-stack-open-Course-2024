@@ -9,8 +9,7 @@ flowchart LR
   cmd1[/GET site URL/]
   cmd2[/HTML file/]
   id2[Server]
-  id1-->cmd1-->id2
-  id2-->cmd2-->id1
+  id1-->cmd1-->id2-->cmd2-->id1
 
 ```
 ```mermaid
