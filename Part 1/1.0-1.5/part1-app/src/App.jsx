@@ -1,62 +1,74 @@
 const Header = course => {
 
   return <>
-    <h1>{course}</h1>
+    <h1>{course.name}</h1>
   </>
 }
 
-const Part  = (exercise) => {
-  return(
-    <>
-    <p>{exercise.name}: {exercise.number} Exercises </p>
-    </>
-  )
 
-}
 
-const Content = () =>{
+const Content = (exercise) =>{
   return(
     <>
     <br />
-    <Part />
-    <Part />
-    <Part />
+    <h2>Course Content:</h2>
+    <p><b>{exercise.name1}</b>:</p><p> {exercise.number1} Exercises </p>
+    <p><b>{exercise.name2}</b>:</p><p> {exercise.number2} Exercises </p>
+    <p><b>{exercise.name3}</b>:</p><p> {exercise.number3} Exercises </p>
     </>
   )
 }
 
-const Total = () =>{
+const Total = (props) =>{
   return (
     <>
     <br />
-    <h3>Total Number of Exercises: 31</h3>
+    <h3>Total Number of Exercises: {props.total}</h3>
     </>
   )
 }
 
-function App() {
-  const course =[{name: 'Half Stack application development',
+const data =[{name: 'Full Stack application development',
 
                   parts: [
                     {
-                      name: 'Fundamentals of React',
-                      exercises: 10
+                      name1: 'Fundamentals of React',
+                      exercise1: 10
                     },
                     {
-                      name: 'Using props to pass data',
-                      exercises: 7
+                      name2: 'Using props to pass data',
+                      exercise2: 7
                     },
                     {
-                      name: 'State of a component',
-                      exercises: 14
+                      name3: 'State of a component',
+                      exercise3: 14
                     }
                   ]
                 }]
+
+const courseName = data[0].name;
+const parts = data[0].parts;
+
+const name1 = parts[0].name1;
+const number1 = parts[0].exercise1;
+console.log('1st Exercise:',name1, number1)
+const name2 = parts[1].name2;
+const number2 = parts[1].exercise2;
+console.log('2nd Exercise:',name2, number2)
+const name3 = parts[2].name3;
+const number3 = parts[2].exercise3;
+console.log('3rd Exercise:',name3, number3)
+
+const total = number1 + number2 + number3; 
+
+function App() {
+  
+  
   return (
    <div>
-    <Header course={course} />
-      <Content parts={parts} />
-      <Total parts={parts} />
+    <Header name={courseName} />
+    <Content name1={name1} number1= {number1} name2={name2} number2={number2} name3={name3} number3={number3} />
+    <Total total={total}/>
    </div>
   )
 }
