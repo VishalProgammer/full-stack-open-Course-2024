@@ -6,13 +6,13 @@ const Popular = (props) => {
   if (props.vote === 0) {
     return (
       <>
-        <p>No Popular Quotes yet, Please Start voting!</p>
+        <p>No Popular Anecdotes yet, Please Start voting!</p>
       </>
     );
   }
   return (
     <div>
-      <h2>Most Voted Quote:</h2>
+      <h2>Most Voted Anecdotes:</h2>
       <p>votes: {props.vote}</p>
       <p>
         <q>{props.popularQuote}</q>
@@ -94,7 +94,7 @@ const App = () => {
 
   return (
     <div>
-      <h1>Quotes for Programmers</h1>
+      <h1>Anecdotes for Programmers</h1>
       <p>
         <q>{anecdotes[quoteIndex]}</q>
       </p>
@@ -105,7 +105,7 @@ const App = () => {
       <button onClick={voteSmashed}>Vote</button>
       <br />
       <br />
-      <button onClick={randomQuote}>Next Quote</button>
+      <button onClick={randomQuote}>Next Anecdotes</button>
       <br />
       <hr />
       <br />
