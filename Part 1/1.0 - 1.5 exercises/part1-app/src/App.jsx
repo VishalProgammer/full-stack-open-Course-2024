@@ -28,7 +28,7 @@ const Total = (props) =>{
   )
 }
 
-const data =[{name: 'Full Stack application development',
+const data =[{name: 'Half Stack application development',
 
                   parts: [
                     {
