@@ -1,0 +1,10 @@
+input{
+  width: 200px;
+  align-items: center;
+}
+
+#addButton{
+  display: flex;
+  flex-direction: column;
+}
+
