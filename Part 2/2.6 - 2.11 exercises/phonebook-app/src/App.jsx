@@ -1,14 +1,15 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './App.css';
+import axios from 'axios';
 
 // Component for adding new contacts
-const AddContact = (props) => {
+const AddContact = ({ nameHandler, numberHandler, action }) => {
   return (
-    <form onSubmit={props.action}>
+    <form onSubmit={action}>
       <div id='addButton'>
-        <label>Name: <input onChange={props.nameHandler} type='text' required /></label>
+        <label>Name: <input onChange={nameHandler} type='text' required /></label>
         <br />
-        <label>Number: <input onChange={props.numberHandler} type='text' required /></label>
+        <label>Number: <input onChange={numberHandler} type='text' required /></label>
       </div>
       <div>
         <button type="submit">Add</button>
@@ -18,10 +19,10 @@ const AddContact = (props) => {
 }
 
 // Component for searching contacts
-const BrowseContacts = (props) => {
+const BrowseContacts = ({ action, handler }) => {
   return (
-    <form onSubmit={props.action}>
-      <input onChange={props.handler} type="text" placeholder="Name of contact" required />
+    <form onSubmit={action}>
+      <input onChange={handler} type="text" placeholder="Name of contact" required />
       <button type="submit">Search</button>
     </form>
   );
@@ -37,9 +38,9 @@ const BrowseResult = ({ value }) => {
 }
 
 // Component for displaying all contacts
-const AllContacts = (props) => {
+const AllContacts = ({ contacts }) => {
   return (
-    <div>{props.contacts}</div>
+    <div>{contacts}</div>
   );
 }
 
@@ -48,13 +49,18 @@ const App = () => {
   const [newNumber, setNewNumber] = useState('');
   const [searchInput, setSearchInput] = useState('');
   const [user, setUser] = useState(null);
-  const [person, setPerson] = useState([
-    { name: 'Krish', number: '1284373', id: 0 },
-    { name: 'Arto Hellas', number: '040-123456', id: 1 },
-    { name: 'Ada Lovelace', number: '39-44-5323523', id: 2 },
-    { name: 'Dan Abramov', number: '12-43-234345', id: 3 },
-    { name: 'Mary Poppendieck', number: '39-23-6423122', id: 4 }
-  ]);
+  const [person, setPerson] = useState([]);
+
+  useEffect(() => {
+    // Fetch all existing contacts from the server
+    axios.get('http://localhost:3001/Persons')
+      .then(response => {
+        setPerson(response.data);
+      })
+      .catch(error => {
+        console.error("Error fetching contacts:", error);
+      });
+  }, []);
 
   // Handle name input
   const handleName = (event) => {
@@ -74,17 +80,34 @@ const App = () => {
   // Handle adding a new contact
   const onSubmit = (event) => {
     event.preventDefault();
-    const newPerson = { name: newName, number: newNumber };
+    
+    const newContact = { name: newName, number: newNumber };
+
+    // Check if the name already exists
     const nameExists = person.some(item => item.name.toLowerCase() === newName.toLowerCase());
 
     if (nameExists) {
       alert('This contact name already exists!');
     } else {
-      setPerson(prevArray => [...prevArray, newPerson]);
-      setNewName(''); // Clear input after adding
-      setNewNumber(''); // Clear number input after adding
+      // Make the POST request to add the new contact
+      axios.post('http://localhost:3001/Persons', newContact)
+        .then(() => {
+          console.log('Contact added!');
+          // Fetch updated contacts
+          return axios.get('http://localhost:3001/Persons');
+        })
+        .then(response => {
+          setPerson(response.data); // Update person state with the new list of contacts
+        })
+        .catch(error => {
+          console.error('Error adding contact:', error);
+        });
+
+      // Clear input fields after adding the contact
+      setNewName('');
+      setNewNumber('');
     }
-  }
+  };
 
   // Handle searching for a contact
   const onClickSearch = (event) => {
