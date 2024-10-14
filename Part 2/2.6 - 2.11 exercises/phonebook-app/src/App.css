@@ -1,10 +1,66 @@
-input{
-  width: 200px;
-  align-items: center;
+/* All page */
+#body{
+  width: 80%;
+  margin: 0 auto;
+  align-items: left;
+  text-align: left;
 }
 
-#addButton{
+
+
+/* Add new Contact */
+#addContact{
   display: flex;
   flex-direction: column;
+  
 }
+#addBtn{
+  margin-top: 10px;
+  width: 70px;
+  text-align: center;
+}
+#addBtn:hover{
+  background-color: blue;
+}
+
+#delete, #contactList{
+  display: inline;
+  
+}
+
+
+
+
+/* Search Bar */
+#searchBar{
+  height: 20px;
+}
+#searchBtn{
+  width: 70px;
+  height: 25px;
+}
+
+
+.redNotif{
+  margin: 5px 0;
+  padding: 5px;
+  color: red;
+  font-size: 20px;
+}
+
+.greenNotif{
+  margin: 5px 0;
+  padding: 5px;
+  color: green;
+  font-size: 20px;
+}
+
+#deleteBtn:hover{
+  background-color: #b21c04;
+  color: black;
+}
+#delete{
+  margin-left: 5px;
+}
+
 
