@@ -152,13 +152,13 @@ const App = () => {
       axios
         .put(`http://localhost:3001/Persons/${existingContact.id}`, newContact)
         .then(() => {
-          console.log('Contact updated!');
+          console.log(`"${existingContact.name}" Contact info got updated!`);
           
           updateContacts()// Fetch the updated list of contacts
-          greenMessage(`"${existingContact.name}" was updated Successfully`)//show update notification
+          greenMessage(`"${existingContact.name}'s" Contact info got updated!`)//show update notification
         })
         .catch(error => {
-          redMessage('Got Error updating the Contact!')
+          redMessage('Got Error updating!Contact may be deleted already, try refreshing the page.')
         });
     } else {
       // User cancels the operation, do nothing
