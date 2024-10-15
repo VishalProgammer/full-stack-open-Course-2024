@@ -1,0 +1,28 @@
+#body{
+  width: 100%;
+  height: 100%;
+  background-color: rgb(43, 43, 43);
+  color: aliceblue;
+}
+
+#infoBtn{
+  font-size: 10px;
+  margin-left: 5px;
+  background-color: gray;
+  color: rgb(186, 249, 255);
+}
+
+#infoBtn:hover{
+  background-color: orangered;
+  color: black;
+}
+
+#searchBtn{
+  background-color: gray;
+  color: white;
+}
+
+#searchBtn:hover{
+  background-color: rgb(58, 58, 189);
+  color: black;
+}
