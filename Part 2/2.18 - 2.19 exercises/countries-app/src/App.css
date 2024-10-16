@@ -1,9 +1,11 @@
 #body{
   width: 80%;
   padding: 30px;
+  padding-top: 5px;
   margin: 0 auto;
   margin-top: 20px;
   text-align: center;
+  align-items: center;
   height: 100%;
   background-color: rgb(43, 43, 43);
   color: aliceblue;
