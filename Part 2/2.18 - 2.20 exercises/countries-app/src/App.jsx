@@ -25,6 +25,13 @@ const App = () => {
       });
   }, []);
 
+  // Click handler for showing country info
+  const onClickInfoBtn = (id) => {
+    setInfoId(id);
+    setShowResult(false);
+    setShowInfo(true);
+  };
+
   // Filter country data based on the searchName
   useEffect(() => {
     if (searchName && allData.length > 0) {
@@ -33,11 +40,26 @@ const App = () => {
         .map(country => country.ccn3);
 
       setFilteredId(filtered);
-    } else {
-      setFilteredId([]);
     }
+    
+    else {
+      setFilteredId([]);
+
+    
+    
+    }
+    
   }, [searchName, allData]);
 
+useEffect(()=>{
+    if(filteredId.length === 1){
+      return onClickInfoBtn(filteredId[0]);
+    }    
+
+
+    },[filteredId])
+
+    
   // Search input handler
   const searchHandler = (event) => {
     setSearch(event.target.value);
@@ -49,14 +71,11 @@ const App = () => {
     setSearchName(search);
     setShowResult(true);
     setShowInfo(false);
+    console.log(filteredId);
+
+    
   };
 
-  // Click handler for showing country info
-  const onClickInfoBtn = (id) => {
-    setInfoId(id);
-    setShowResult(false);
-    setShowInfo(true);
-  };
 
   // Get the selected country based on infoId
   const selectedCountry = allData.find(country => country.ccn3 === infoId);
