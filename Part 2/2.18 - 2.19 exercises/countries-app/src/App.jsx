@@ -55,8 +55,6 @@ useEffect(()=>{
     if(filteredId.length === 1){
       return onClickInfoBtn(filteredId[0]);
     }    
-
-
     },[filteredId])
 
     
